@@ -1,0 +1,31 @@
+[build]
+  command   = "echo 'Static assets ready'"
+  publish   = "public"
+
+[build.environment]
+  PHP_VERSION = "8.2"
+  APP_ENV     = "production"
+
+[[redirects]]
+  from   = "/assets/*"
+  to     = "/assets/:splat"
+  status = 200
+
+[[redirects]]
+  from   = "/*"
+  to     = "/index.php"
+  status = 200
+
+[context.production.environment]
+  APP_ENV = "production"
+
+[context.deploy-preview.environment]
+  APP_ENV = "development"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection       = "1; mode=block"
+    Referrer-Policy        = "strict-origin-when-cross-origin"

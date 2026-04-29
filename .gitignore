@@ -1,0 +1,37 @@
+# Environment
+.env
+.env.local
+.env.production
+
+# Dependencies
+vendor/
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Uploads
+public/uploads/
+
+# Cache
+cache/
+tmp/
+
+# Images brouillon
+*.jpeg
+*.jpg
+*.png
+!public/assets/img/**
+
+# Scripts maintenance locale
+database/fix-*.sql

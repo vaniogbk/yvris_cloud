@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "public/index.php",
+      "use": "vercel-php@0.6.0"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/public/assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.php"
+    }
+  ],
+  "env": {
+    "DB_HOST":  "@db_host",
+    "DB_NAME":  "@db_name",
+    "DB_USER":  "@db_user",
+    "DB_PASS":  "@db_pass",
+    "APP_URL":  "@app_url",
+    "APP_ENV":  "production"
+  }
+}
