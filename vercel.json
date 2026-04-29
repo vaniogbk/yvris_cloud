@@ -17,11 +17,11 @@
     }
   ],
   "env": {
-    "DB_HOST":  "@db_host",
-    "DB_NAME":  "@db_name",
-    "DB_USER":  "@db_user",
-    "DB_PASS":  "@db_pass",
-    "APP_URL":  "@app_url",
-    "APP_ENV":  "production"
+    "APP_ENV": "production",
+    "DB_HOST": "localhost",
+    "DB_PORT": "3306",
+    "DB_NAME": "yvris_cloud",
+    "DB_USER": "root",
+    "DB_PASS": ""
   }
 }
