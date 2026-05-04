@@ -12,9 +12,9 @@ class Router {
 
     public function dispatch(string $uri, string $httpMethod): void {
         $path = parse_url($uri, PHP_URL_PATH);
-        $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+        $base = rtrim(APP_BASE, '/');
         $path = '/' . ltrim(substr($path, strlen($base)), '/');
-        $path = $path === '' ? '/' : $path;
+        $path = ($path === '' || $path === '//' ) ? '/' : $path;
 
         $routes = $this->routes[$httpMethod] ?? [];
 

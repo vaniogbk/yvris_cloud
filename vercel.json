@@ -17,11 +17,13 @@
     }
   ],
   "env": {
-    "APP_ENV": "production",
-    "DB_HOST": "localhost",
-    "DB_PORT": "3306",
-    "DB_NAME": "yvris_cloud",
-    "DB_USER": "root",
-    "DB_PASS": ""
+    "APP_ENV":  "production",
+    "APP_URL":  "https://yvris-cloud.vercel.app",
+    "APP_BASE": "",
+    "DB_HOST":  "localhost",
+    "DB_PORT":  "3306",
+    "DB_NAME":  "yvris_cloud",
+    "DB_USER":  "root",
+    "DB_PASS":  ""
   }
 }
